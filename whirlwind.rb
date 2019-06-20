@@ -6,10 +6,7 @@ puts "what are your five favorite foods?"
 food = gets.chomp
 array << food
 end
-
-array.each do |index|
-  p "I love #{index}"
-end
+p array
 
 # Now, instead of printing out the array, output 5 separate lines of each food, with the prefix, “I love”. For example
 #   I love cobb salad
@@ -17,7 +14,16 @@ end
 #   I love pizza
 #   I love Swedish meatballs
 #   I love mac and cheese
+array = []
+5.times do
+puts "what are your five favorite foods?"
+food = gets.chomp
+array << food
+end
 
+array.each do |index|
+  p "I love #{index}"
+end
 
 # Finally, change your program so that when the list is printed in the terminal, each food is prefaced with a number, beginning with 1 and going up to 5, for example:
 # 1. cobb salad
@@ -25,3 +31,14 @@ end
 # 3. pizza
 # 4. Swedish meatballs
 # 5. mac and cheese
+array = []
+variable = 1
+5.times do
+puts "what are your five favorite foods?"
+food = gets.chomp
+array << food
+end
+array.each do |index|
+  p "##{variable} #{index}"
+  variable+=1
+end
